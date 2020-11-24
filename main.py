@@ -6,7 +6,7 @@ from your_api_key import API_KEY
 
 
 def main():
-    if len(API_KEY) != 0:
+    if API_KEY:
         NeedleDropReviewCollector(API_KEY).run()
     else:
         print('You need an YouTube API key.')
