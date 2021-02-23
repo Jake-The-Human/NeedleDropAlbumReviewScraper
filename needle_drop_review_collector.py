@@ -4,7 +4,7 @@ from googleapiclient.discovery import build
 from album import Album
 
 
-CVS_FILE_NAME = 'albums_list.csv'
+CSV_FILE_NAME = 'albums_list.csv'
 
 
 class NeedleDropReviewCollector:
@@ -87,7 +87,7 @@ class NeedleDropReviewCollector:
         if len(self.allReveiwedAlbums) <= 0:
             return
 
-        with open(CVS_FILE_NAME, 'w', newline='') as csvfile:
+        with open(CSV_FILE_NAME, 'w', newline='') as csvfile:
             fieldnames = Album.attributeList
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
